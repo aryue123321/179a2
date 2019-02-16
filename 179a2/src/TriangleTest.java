@@ -20,7 +20,7 @@ class TriangleTest {
 	void getAreaTest() {
 		assertEquals(-1, new Triangle(0,0,0).getArea(), "isImpossible gives area -1");
 		assertEquals(6, new Triangle(3,4,5).getArea(), "length 3 4 5 has area 6");
-//		TESTING2
+//		TESTING3
 	}
 
 }
