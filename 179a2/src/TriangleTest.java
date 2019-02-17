@@ -1,26 +1,32 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class TriangleTest {
 	
-	@Test
-	void isImpossibleTest() {
-		assertEquals(true, new Triangle(0,0,0).isImpossible(), "A point is not a triangle");
-		assertEquals(true, new Triangle(1,1,2).isImpossible(), "A line is not a triangle");
-		assertEquals(true, new Triangle(-1,1,1).isImpossible(), "A triangle cannot has negative length");
-		assertEquals(true, new Triangle(3,1,1).isImpossible(), "length a > b+c is not a triangle");
-		assertEquals(true, new Triangle(1,3,1).isImpossible(), "length b > a+c is not a triangle");
-		assertEquals(true, new Triangle(1,1,3).isImpossible(), "length c > a+b is not a triangle");
-		assertEquals(true, new Triangle(-1,-1,-1).isImpossible(), "all negative lengths is not a triangle");
-		assertEquals(false, new Triangle(3,4,5).isImpossible(), "length 3 4 5 is an triangle");
+	@Nested
+	class InvalidTriangleTest{
+		
+		@ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}")
+		@CsvSource(value = {"0,0,0", "-1,-1,-1", "-1,2,3", "1,1,2", "-3,-4,-5", "3,1,1"})
+		void properties_of_invalid_triangle(int s1, int s2, int s3) {
+			Triangle t = new Triangle(s1,s2,s3);
+			assertAll(
+				() -> assertEquals("impossible", t.classify(), "invalid triangle classifies as impossible"),
+				() -> assertEquals(-1, t.getArea(), "invalid triangle return area -1"),
+				() -> assertEquals(-1, t.getPerimeter(), "invalid triangle return perimeter -1"),
+				() -> assertEquals(String.format("%d,%d,%d", s1, s2, s3), t.getSideLengths(), "return the same lengths"),
+				() -> assertFalse(t.isEquilateral(), "invalid triangle is not equilateral"),
+				() -> assertTrue(t.isImpossible(), "invalid triangle is impossible"),
+				() -> assertFalse(t.isIsosceles(), "invalid triangle is not isosceles"),
+				() -> assertFalse(t.isRightAngled(), "invalid triangle is not isosceles"),
+				() -> assertFalse(t.isScalene(), "invalid triangle is not scalene")
+			);
+		}
 	}
 	
-	@Test
-	void getAreaTest() {
-		assertEquals(-1, new Triangle(0,0,0).getArea(), "isImpossible gives area -1");
-		assertEquals(6, new Triangle(3,4,5).getArea(), "length 3 4 5 has area 6");
-//		TESTING3
-	}
 
 }
