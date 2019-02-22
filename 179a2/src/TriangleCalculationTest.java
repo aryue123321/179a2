@@ -12,7 +12,7 @@ class TriangleCalculationTest {
    @Nested
     class GetPerimeter_Test{
       
-     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {4}")
+     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {3}")
      @CsvSource(value = {
          "0, 0, 0", 
          "0, 1, 1", 
@@ -58,7 +58,7 @@ class TriangleCalculationTest {
      };
        
      //-------------------------------------------------------------------------------------
-     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {4}")
+     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {3}")
      @CsvSource(value = {
          "1, 1, 1, 3", 
          "2147483647, 2147483647, 2147483647, 6442450941"
@@ -70,7 +70,7 @@ class TriangleCalculationTest {
      };
      
      //-------------------------------------------------------------------------------------
-     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {4}")
+     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {3}")
      @CsvSource(value = {
          "2, 2, 1, 5", 
          "2147483647, 2147483647, 1, 4294967295"
@@ -82,7 +82,7 @@ class TriangleCalculationTest {
      };
      
      //-------------------------------------------------------------------------------------
-     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {4}")
+     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {3}")
      @CsvSource(value = {
          "3, 4, 5, 12", 
          "4, 3, 5, 12",
@@ -95,7 +95,7 @@ class TriangleCalculationTest {
      };
      
      //-------------------------------------------------------------------------------------
-     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {4}")
+     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {3}")
      @CsvSource(value = {
          "3, 5, 7, 15", 
          "2147483647, 214748364, 2147480000, 4509712011",
@@ -108,7 +108,7 @@ class TriangleCalculationTest {
      };
      
      //-------------------------------------------------------------------------------------
-     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {4}")
+     @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {3}")
      @CsvSource(value = {
          "1, 1, 2", 
          "500000, 500000, 1000000",
@@ -127,7 +127,7 @@ class TriangleCalculationTest {
     @Nested
      class GetArea_Test{
        
-      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {4}")
+      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, perimeter= {3}")
       @CsvSource(value = {
           "0, 0, 0", 
           "0, 1, 1", 
@@ -173,7 +173,7 @@ class TriangleCalculationTest {
       };
         
       //-------------------------------------------------------------------------------------
-      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, area= {4}")
+      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, area= {3}")
       @CsvSource(value = {
           "1, 1, 1, 0.4330127018922193", 
           "2147483647, 2147483647, 2147483647, 1.996918621258039e+18"
@@ -185,7 +185,7 @@ class TriangleCalculationTest {
       };
       
       //-------------------------------------------------------------------------------------
-      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, area= {4}")
+      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, area= {3}")
       @CsvSource(value = {
           "2, 2, 1, 0.9682458365518543", 
           "2147483647, 2147483647, 1, 1073741823.5"
@@ -197,7 +197,7 @@ class TriangleCalculationTest {
       };
       
       //-------------------------------------------------------------------------------------
-      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, area= {4}")
+      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, area= {3}")
       @CsvSource(value = {
           "3, 4, 5, 6", 
           "4, 3, 5, 6",
@@ -210,7 +210,7 @@ class TriangleCalculationTest {
       };
       
       //-------------------------------------------------------------------------------------
-      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, area= {4}")
+      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, area= {3}")
       @CsvSource(value = {
           "3, 5, 7, 6.49519052838329", 
           "2147483647, 214748364, 2147480000, 2.3029569313718573e+17",
@@ -223,7 +223,7 @@ class TriangleCalculationTest {
       };
       
       //-------------------------------------------------------------------------------------
-      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, area= {4}")
+      @ParameterizedTest(name = "s1 = {0}, s2 = {1}, s3 = {2}, area= {3}")
       @CsvSource(value = {
           "1, 1, 2", 
           "500000, 500000, 1000000",
