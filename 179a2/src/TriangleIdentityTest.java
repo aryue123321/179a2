@@ -207,7 +207,7 @@ class TriangleIdentityTest {
       "500000, 500000, 1000000",
       "1,2,3"
       })
-  void boundary_one_of_the_length_equal_to_sum_of_others(int s1, int s2, int s3) {
+  void eq8_one_of_the_length_equal_to_sum_of_others(int s1, int s2, int s3) {
     String condition = "scalene";
     Triangle t = new Triangle(s1,s2,s3);
     assertAll( 
