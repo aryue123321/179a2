@@ -146,18 +146,18 @@ class TriangleBVTest {
       
       "-1, -1, 200, impossible", 
       "0, 0, 2, impossible", 
-      "1, 1, 2, isossceles",
+      "1, 1, 2, impossible",
       "2147483647, 2147483647, 5, isossceles",
       
       "-1, -1, -1, impossible", 
       "0, 0, 0, impossible", 
-      "1, 1, 1, equilateal",
-      "2147483647, 2147483647, 2147483647, equilateal",
+      "1, 1, 1, equilateral",
+      "2147483647, 2147483647, 2147483647, equilateral",
       
       "3, 4, 5, right-angled",
       "4, 4, 3, isossceles",
-      "10, 10, 10, equilateal",
-      "4, 5, 6, scalane",
+      "10, 10, 10, equilateral",
+      "4, 5, 6, scalene",
   })
   void test_for_classify(int s1, int s2, int s3, String expected) {
     Triangle t1 = new Triangle(s1,s2,s3);
